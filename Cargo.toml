@@ -42,3 +42,8 @@ reqwest = { version = "0.12", default-features = false, features = ["json", "rus
 [dev-dependencies]
 tokio = { version = "1", features = ["full"] }
 tempfile = "3.10"
+anyhow = "1.0"
+
+[[example]]
+name = "quickstart"
+path = "examples/quickstart.rs"
