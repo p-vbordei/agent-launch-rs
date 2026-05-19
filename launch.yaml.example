@@ -1,0 +1,23 @@
+version: 1
+project:
+  name: agent-id
+  oneliner: "Machine-first identity for AI agents"
+  audience: "AI infra builders, OSS contributors"
+  hooks:
+    - "Self-custody DID + Capability VC"
+    - "Three functions, five dependencies, zero blockchain"
+platforms:
+  - kind: hn
+    pattern: show-hn
+  - kind: reddit
+    subreddit: programming
+  - kind: reddit
+    subreddit: typescript
+  - kind: x
+    handle: vbordei
+  - kind: mastodon
+    instance: hachyderm.io
+    handle: vbordei
+  - kind: linkedin
+context:
+  repo: p-vbordei/agent-id

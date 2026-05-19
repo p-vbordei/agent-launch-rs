@@ -1,0 +1,44 @@
+[package]
+name = "agent-launch"
+version = "0.1.0"
+edition = "2021"
+authors = ["Vlad Bordei <bordeivlad@gmail.com>"]
+description = "Draft platform-native release announcements (HN, Reddit, X, Mastodon, LinkedIn) from CHANGELOG + README (Rust port of @p-vbordei/agent-launch)"
+license = "Apache-2.0"
+repository = "https://github.com/p-vbordei/agent-launch-rs"
+homepage = "https://github.com/p-vbordei/agent-launch-rs"
+documentation = "https://docs.rs/agent-launch"
+readme = "README.md"
+keywords = ["release-announcements", "show-hn", "reddit", "open-source", "changelog"]
+categories = ["command-line-utilities"]
+include = [
+    "src/**/*",
+    "prompts/**/*",
+    "LICENSE",
+    "README.md",
+    "SPEC.md",
+]
+
+[lib]
+name = "agent_launch"
+path = "src/lib.rs"
+
+[[bin]]
+name = "agent-launch"
+path = "src/bin/agent-launch.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+serde_yaml = "0.9"
+regex = "1.10"
+thiserror = "1.0"
+async-trait = "0.1"
+clap = { version = "4.5", features = ["derive"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "fs"] }
+chrono = { version = "0.4", default-features = false, features = ["std", "clock"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+tempfile = "3.10"
