@@ -9,7 +9,7 @@ repository = "https://github.com/p-vbordei/agent-launch-rs"
 homepage = "https://github.com/p-vbordei/agent-launch-rs"
 documentation = "https://docs.rs/agent-launch"
 readme = "README.md"
-keywords = ["release-announcements", "show-hn", "reddit", "open-source", "changelog"]
+keywords = ["release-announce", "show-hn", "reddit", "open-source", "changelog"]
 categories = ["command-line-utilities"]
 include = [
     "src/**/*",
